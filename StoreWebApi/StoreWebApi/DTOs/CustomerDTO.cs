@@ -1,20 +1,15 @@
 ﻿using System.Collections.Generic;
 
-namespace StoreWebApi.Models
+namespace StoreWebApi.DTOs
 {
-    public partial class Customer
+    public class CustomerDTO
     {
-        public Customer()
-        {
-            CustomerOrder = new HashSet<CustomerOrder>();
-        }
-
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
 
-        public ICollection<CustomerOrder> CustomerOrder { get; set; }
+        public List<CustomerOrderDTO> CustomerOrder { get; set; }
     }
 }

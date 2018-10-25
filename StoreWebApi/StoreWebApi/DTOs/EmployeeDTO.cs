@@ -1,6 +1,6 @@
-﻿namespace StoreWebApi.Models
+﻿namespace StoreWebApi.DTOs
 {
-    public partial class Employee
+    public class EmployeeDTO
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
