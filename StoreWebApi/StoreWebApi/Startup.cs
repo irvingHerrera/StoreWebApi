@@ -12,6 +12,7 @@ namespace StoreWebApi
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            DTOs.AutoMapperConfiguration.Configure();
         }
 
         public IConfiguration Configuration { get; }
