@@ -11,6 +11,7 @@ namespace StoreWebApi.DTOs
             {
                 config.CreateMap<Customer, CustomerDTO>()
                 .ForMember(x => x.CustomerOrder, o => o.Ignore())
+                .ForMember(x => x.Nombre, o => o.MapFrom(s => s.FirstName))
                 .ReverseMap();
 
                 config.CreateMap<CustomerOrder, CustomerOrderDTO>()
